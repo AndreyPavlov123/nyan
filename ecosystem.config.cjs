@@ -1,4 +1,3 @@
-
 const OPENAI_API_KEY = "TODO";
 
 module.exports = {
@@ -11,7 +10,7 @@ module.exports = {
         },
         {
             name: "nyan_ai_crawl",
-            script: "bash crawl.sh",
+            script: "source ../venv/bin/activate && bash crawl.sh",
             watch: false,
             restart_delay: 5000,
             env: {
@@ -20,7 +19,7 @@ module.exports = {
         },
         {
             name: "nyan_ai_send_daemon",
-            script: "bash send.sh",
+            script: "source ../venv/bin/activate && bash send.sh",
             watch: false,
             restart_delay: 5000,
             env: {
